@@ -3,10 +3,7 @@ Number.prototype.clamp = function(min, max) { return Math.min(Math.max(this, min
 // # module.exports = helpers
 
 export function mobileCheck(){
-  if (typeof navigator !== 'undefined') {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 600
-  }
-  return null
+  return false
 }
 export const sample = items => items[Math.floor(Math.random()*items.length)]
 
