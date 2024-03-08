@@ -91,7 +91,7 @@ class Effect extends VantaBase {
     geometry.computeBoundingSphere()
     geometry.setDrawRange( 0, 0 )
     const material = new THREE.LineBasicMaterial({
-      vertexColors: THREE.VertexColors,
+      vertexColors: true,
       blending: this.blending === 'additive' ? THREE.AdditiveBlending : null,
       // blending: THREE.SubtractiveBlending
       transparent: true

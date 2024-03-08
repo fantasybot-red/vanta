@@ -1,4 +1,5 @@
 import {mobileCheck, getBrightness} from './helpers.js'
+import * as THREE from 'three'
 
 var effectName = null
 var effect = null
@@ -61,6 +62,7 @@ var loadEffect = function(_effectName, loadOptions) {
   loadOptions || (loadOptions = {})
   loadOptions.el = 'section'
   loadOptions.backgroundAlpha = 1
+  loadOptions.THREE = THREE
 
   console.log('[VANTA] Loading effect: ', _effectName)
   if (typeof VANTA == "undefined" || typeof VANTA[_effectName] !== "function") {
@@ -374,7 +376,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       window.history.pushState({
         effect: _effectName
       }, "", url)
-      loadEffect(_effectName)
+      loadEffect(_effectName, {})
     })
   })
 

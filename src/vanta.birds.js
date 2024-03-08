@@ -779,8 +779,8 @@ class Birds extends VantaBase {
           new THREE.MeshBasicMaterial( {
             color: 0xffffff,
             side: THREE.DoubleSide,
-            // colors: THREE.VertexColors,
-					  vertexColors: THREE.VertexColors,
+            // colors: true,
+					  vertexColors: true,
           }))
         bird.phase = Math.floor( Math.random() * 62.83 )
         bird.position.x = boids[i].position.x
